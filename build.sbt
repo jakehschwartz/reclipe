@@ -1,4 +1,4 @@
-name := "reclipe-backend"
+name := "reclipe"
 
 organization := "com.jakehschwartz"
 
@@ -53,7 +53,12 @@ scalacOptions ++= Seq(
   "-Ywarn-value-discard"               // Warn when non-Unit expression results are unused.
 )
 
+
+
 libraryDependencies ++= Seq(
 )
 
 coverageEnabled.in(Test, test) := true
+
+enablePlugins(ScalaJSPlugin)
+scalaJSUseMainModuleInitializer := true

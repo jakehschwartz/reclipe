@@ -44,6 +44,16 @@ jobs:
           name: Deploy
           command: |
             bash deploy.sh
+      - run:
+          name: Push
+          command: |
+            git config user.email "jakehschwartz@gmail.com"
+            git config user.name "jakehschwartz"
+            git checkout gh-pages
+            git commit -am "New changes from ${CIRCLE_SHA1}"
+            git push origin gh-pages
+
+
 
 workflows:
   version: 2

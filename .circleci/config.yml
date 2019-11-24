@@ -50,7 +50,8 @@ jobs:
             git config user.email "jakehschwartz@gmail.com"
             git config user.name "jakehschwartz"
             git checkout gh-pages
-            git commit -am "New changes from ${CIRCLE_SHA1}"
+            git add .
+            git commit -m "New changes from ${CIRCLE_SHA1}"
             git push origin gh-pages
 
 

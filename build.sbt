@@ -57,5 +57,3 @@ libraryDependencies ++= Seq(
 )
 
 coverageEnabled.in(Test, test) := true
-
-scapegoatVersion in ThisBuild := "1.3.8"

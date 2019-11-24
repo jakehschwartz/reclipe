@@ -1,0 +1,28 @@
+{
+  "mappings": {
+    "properties": {
+      "date_added": {
+        "type": "date"
+      },
+      "date_updated": {
+        "type": "date"
+      },
+      "name": {
+        "type": "text"
+      },
+      "source": {
+        "properties": {
+          "url": {
+            "type": "keyword"
+          }
+        }
+      }
+    }
+  },
+  "settings": {
+    "index" : {
+      "number_of_shards" : 1,
+      "number_of_replicas" : 0
+    }
+  }
+}

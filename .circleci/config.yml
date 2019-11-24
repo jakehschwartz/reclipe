@@ -9,11 +9,6 @@ jobs:
       # specify the version you desire here
       - image: circleci/openjdk:8-jdk-node
 
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/postgres:9.4
-
     working_directory: ~/repo
 
     environment:
@@ -31,19 +26,16 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run: cat /dev/null | sbt test:compile
+      - run: cat /dev/null | sbt test
 
       - save_cache:
           paths:
             - ~/.m2
           key: v1-dependencies--{{ checksum "build.sbt" }}
 
-      # run tests!
-      - run: cat /dev/null | sbt test:test
-
   publish:
     docker:
-      - image: circleci/openjdk:8u171-jdk-stretch-node-browsers
+      - image: circleci/openjdk:8-jdk-node
     steps:
       - checkout
       - restore_cache:

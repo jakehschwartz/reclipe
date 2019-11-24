@@ -1,14 +1,10 @@
-if [ ! -d "docs" ]; then
-	mkdir docs
-fi
+cp -fr source/* .
 
-cp -fr source/* docs/
-
-if [ ! -d "docs/js" ]; then
-	mkdir docs/js
+if [ ! -d "js" ]; then
+	mkdir js
 fi
 
 # Generate .js files from Scala
 sbt fastOptJS
 
-cp target/scala-*/*.js docs/js/
+cp target/scala-*/*.js js/

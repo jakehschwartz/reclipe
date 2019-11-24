@@ -1,5 +1,5 @@
 package reclipe
 
-object TemplateTest extends App {
+object Main extends App {
   println("Hello World!")
 }

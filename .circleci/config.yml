@@ -50,9 +50,10 @@ jobs:
             git config user.email "jakehschwartz@gmail.com"
             git config user.name "jakehschwartz"
             git checkout gh-pages
+            git rebase master
             git add .
-            git commit -m "New changes from ${CIRCLE_SHA1}"
-            git push origin gh-pages
+            git commit -m "New changes from ${CIRCLE_SHA1} [ci skip]"
+            git push origin gh-pages -f
 
 
 

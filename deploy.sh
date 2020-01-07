@@ -5,6 +5,6 @@ if [ ! -d "js" ]; then
 fi
 
 # Generate .js files from Scala
-sbt fastOptJS
+sbt fullOptJS
 
 cp target/scala-*/*.js js/

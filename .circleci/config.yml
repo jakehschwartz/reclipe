@@ -18,6 +18,8 @@ jobs:
 
     steps:
       - checkout
+      - run: node -v
+      - run: npm install jsdom
 
       # Download and cache dependencies
       - restore_cache:
@@ -31,6 +33,9 @@ jobs:
       - save_cache:
           paths:
             - ~/.m2
+            - ~/.sbt
+            - ~/.ivy2/cache
+
           key: v1-dependencies--{{ checksum "build.sbt" }}
 
   publish:

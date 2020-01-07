@@ -60,7 +60,7 @@ libraryDependencies ++= Seq(
   "com.lihaoyi" %%% "utest" % "0.7.2" % "test"
 )
 
-scalaJSUseMainModuleInitializer := true
+mainClass := Some("reclipe.Main")
 
 jsEnv := new org.scalajs.jsenv.jsdomnodejs.JSDOMNodeJSEnv()
 

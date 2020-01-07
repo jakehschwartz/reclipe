@@ -3,13 +3,6 @@ package reclipe
 object Main extends App {
   println(
     """
-      |<!DOCTYPE html>
-      |<html>
-      |<head>
-      |    <meta charset="UTF-8">
-      |    <title>Recipe Scraper</title>
-      |</head>
-      |<body>
       |<p>Drag this to your bookmark bar:</p>
       |<a href="javascript: (function () {
       |    let code = document.createElement('script');
@@ -22,8 +15,6 @@ object Main extends App {
       |    code.setAttribute('type', 'text/javascript');
       |    document.body.appendChild(execute);
       | }());">Scraper</a>
-      |</body>
-      |</html>
       |""".stripMargin.trim
   )
 }

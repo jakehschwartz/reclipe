@@ -7,4 +7,4 @@ fi
 # Generate .js files from Scala
 sbt fullOptJS
 
-cp target/scala-*/*.js js/
+cp target/scala-*/*.js js/s

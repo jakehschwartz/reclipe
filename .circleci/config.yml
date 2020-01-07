@@ -48,16 +48,11 @@ jobs:
       - run:
           name: Deploy
           command: |
-            bash deploy.sh
-      - run:
-          name: Push
-          command: |
             git config user.email "jakehschwartz@gmail.com"
             git config user.name "jakehschwartz"
-            git stash save
             git checkout gh-pages
             git rebase master
-            git stash pop
+            bash deploy.sh
             git add .
             git commit -m "New changes from ${CIRCLE_SHA1} [ci skip]"
             git push origin gh-pages -f

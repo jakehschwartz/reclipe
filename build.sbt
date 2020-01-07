@@ -53,12 +53,15 @@ scalacOptions ++= Seq(
   "-Ywarn-value-discard"               // Warn when non-Unit expression results are unused.
 )
 
-
+enablePlugins(ScalaJSPlugin)
 
 libraryDependencies ++= Seq(
+  "org.scala-js" %%% "scalajs-dom" % "0.9.8",
+  "com.lihaoyi" %%% "utest" % "0.7.2" % "test"
 )
 
-coverageEnabled.in(Test, test) := true
-
-enablePlugins(ScalaJSPlugin)
 scalaJSUseMainModuleInitializer := true
+
+jsEnv := new org.scalajs.jsenv.jsdomnodejs.JSDOMNodeJSEnv()
+
+testFrameworks += new TestFramework("utest.runner.Framework")

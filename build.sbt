@@ -60,8 +60,6 @@ libraryDependencies ++= Seq(
   "com.lihaoyi" %%% "utest" % "0.7.2" % "test"
 )
 
-mainClass := Some("reclipe.Main")
-
 jsEnv := new org.scalajs.jsenv.jsdomnodejs.JSDOMNodeJSEnv()
 
 testFrameworks += new TestFramework("utest.runner.Framework")

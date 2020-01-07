@@ -8,17 +8,15 @@
 
 <body>
 <!-- Include Scala.js compiled code -->
-<script type="text/javascript" src="js/reclipe-opt.js"></script>
-
 <p>Drag this to your bookmark bar:</p>
 <a href="javascript: (function () {
     let code = document.createElement('script');
-    code.setAttribute('src', 'https://jakehschwartz.com/reclipe/scripts/scraper.js');
+    code.setAttribute('src', 'https://jakehschwartz.com/reclipe/js/reclipe-opt.js');
     code.setAttribute('type', 'text/javascript');
     document.body.appendChild(code);
 
     let execute = document.createElement('script');
-    execute.setAttribute('src', 'https://jakehschwartz.com/reclipe/scripts/launcher.js');
+    execute.setAttribute('src', 'https://jakehschwartz.com/reclipe/js/launcher.js');
     code.setAttribute('type', 'text/javascript');
     document.body.appendChild(execute);
  }());">Scraper</a>
